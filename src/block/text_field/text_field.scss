@@ -1,0 +1,9 @@
+@import "/src/assets/scss/utils/vars";
+
+.text-field {
+  width: 320px;
+  height: 44px;
+  border: 1px solid $lighter-shade;
+  border-radius: 4px;
+  background: $bg-white;
+}

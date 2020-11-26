@@ -1,0 +1,54 @@
+{
+  "name": "hotel_toxin",
+  "version": "1.0.0",
+  "description": "webpack modules",
+  "main": "/src/js/app.js",
+  "scripts": {
+    "build": "webpack --config ./build/webpack.build.conf.js",
+    "dev": "webpack --config ./build/webpack.dev.conf.js",
+    "watch": "webpack --watch --mode development --config ./build/webpack.base.conf.js",
+    "start_server": "webpack serve --config ./build/webpack.devServer.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/It-Sergik/webpack-tempalte.git"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 3 versions"
+  ],
+  "author": "Orlov Sergei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/It-Sergik/webpack-tempalte/issues"
+  },
+  "homepage": "https://github.com/It-Sergik/webpack-tempalte#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "autoprefixer": "^10.0.2",
+    "babel-loader": "^8.2.1",
+    "copy-webpack-plugin": "^6.3.2",
+    "css-loader": "^5.0.1",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.10",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^1.3.1",
+    "popper.js": "^1.16.1",
+    "postcss": "^8.1.10",
+    "postcss-loader": "^4.1.0",
+    "pug": "^3.0.0",
+    "pug-loader": "^2.4.0",
+    "sass-loader": "^10.1.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.7.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.4.0"
+  },
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

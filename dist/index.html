@@ -1,1 +1,38 @@
-<!doctype html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Form Elements</title><link href="./assets/css/app.css" rel="stylesheet"></head><body><input class="text-field"><script src="./assets/js/app.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Form Elements
+    </title>
+  <link href="./assets/css/app.css" rel="stylesheet"></head>
+  <body>
+<input class="text-field" type="text" placeholder="Email">
+<div class="dropdown">
+  <div class="dropdown__header">
+    <div class="dropdown__text">
+      <p class="dropdown__current">Сколько гостей</p>
+    </div>
+    <div class="dropdown__img"><img class="dropdown__img--arrow" src="./assets/img/svg/expand_more.svg" alt=""></div>
+  </div>
+  <div class="dropdown__body">
+    <div class="dropdown__item">
+      <p class="dropdown__item--text">Взрослые</p>
+      <div class="dropdown__button"><span class="dropdown__button--add"></span></div>
+      <p class="dropdown__value"></p>
+      <div class="dropdown__button"><span class="dropdown_button--del"></span></div>
+      <p class="dropdown__item--text">Дети</p>
+      <div class="dropdown__button"><span class="dropdown__button--add"></span></div>
+      <p class="dropdown__value"></p>
+      <div class="dropdown__button"><span class="dropdown_button--del"></span></div>
+      <p class="dropdown__item--text">Младенцы</p>
+      <div class="dropdown__button"><span class="dropdown__button--add"></span></div>
+      <p class="dropdown__value"></p>
+      <div class="dropdown__button"><span class="dropdown_button--del"></span></div>
+    </div>
+  </div>
+  <p class="dropdown__button-apply">Очистить</p>
+  <p class="dropdown__button-apply">Применить</p>
+</div>
+  <script src="./assets/js/app.js"></script></body>
+</html>

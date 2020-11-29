@@ -2,8 +2,26 @@
 
 .text-field {
   width: 320px;
-  height: 44px;
   border: 1px solid $lighter-shade;
   border-radius: 4px;
-  background: $bg-white;
+  outline: none;
+  padding: 13px 0 13px 15px;
+
+  &::placeholder {
+    font: {
+      family: $mainFont;
+      weight: $mainFontWeight;
+      size: 14px;
+    }
+    line-height: 18px;
+    color: $lighter-shade;
+  }
+
+  &:focus {
+    border: 1px solid $light-shade;
+  }
+
+  &:hover {
+    border: 1px solid $light-shade;
+  }
 }

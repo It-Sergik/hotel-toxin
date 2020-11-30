@@ -7,6 +7,11 @@
     border-top: none;
     border-radius: 4px;
     box-sizing: border-box;
+    display: none;
+  }
+
+  &__active {
+    display: block;
   }
 
   &__header {
@@ -20,6 +25,7 @@
     justify-content: space-between;
     outline: none;
   }
+
   &__img {
     display: flex;
     text-align: center;
@@ -37,5 +43,91 @@
     color: $dark-shade;
     line-height: 24px;
     margin: 12px 0 8px 15px;
+  }
+
+  &__count {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-right: 7px;
+  }
+
+  &__item {
+    display: flex;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+
+    &--text {
+      text-transform: uppercase;
+      font: {
+        family: $mainFont;
+        weight: 700;
+        size: 12px;
+      }
+      line-height: 15px;
+      color: $darker-shade;
+      margin: 15px;
+    }
+  }
+
+  &__button {
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $lighter-shade;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    line-height: 28px;
+    justify-content: center;
+    box-sizing: border-box;
+
+    &--del,
+    &--add {
+      text-decoration: none;
+      text-transform: none;
+      font: {
+        family: $mainFont;
+        size: 18px;
+        weight: 400;
+      }
+      line-height: 22px;
+      color: $light-shade;
+    }
+  }
+
+  &__value {
+    text-decoration: none;
+    text-transform: none;
+    font: {
+      family: $mainFont;
+      size: 12px;
+      weight: 700;
+    }
+    line-height: 12px;
+    color: $dark-shade;
+    margin: 0 14px 0 14px;
+  }
+
+  &__button-settings {
+    text-decoration: none;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__button-clear,
+  &__button-apply {
+    text-decoration: none;
+    font: {
+      family: $mainFont;
+      size: 12px;
+      weight: 700;
+    }
+    line-height: 15px;
+    color: $purple;
+    margin: 20px 7px 13px 14px;
   }
 }

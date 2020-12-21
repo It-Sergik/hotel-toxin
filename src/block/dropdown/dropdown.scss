@@ -83,6 +83,9 @@
     line-height: 28px;
     justify-content: center;
     box-sizing: border-box;
+    cursor: pointer;
+    outline: none;
+    background-color: $bg-white;
 
     &--del,
     &--add {

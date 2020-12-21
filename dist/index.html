@@ -1,1 +1,59 @@
-<!doctype html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Form Elements</title><link href="./assets/css/app.css" rel="stylesheet"></head><body><input class="text-field" placeholder="Email"><div class="dropdown"><div class="dropdown__header"><div class="dropdown__text"><span class="dropdown__current">Сколько гостей</span></div><div class="dropdown__img"><img class="dropdown__img--arrow" src="./assets/img/svg/expand_more.svg" alt=""></div></div><div class="dropdown__body dropdown__active"><div class="dropdown__item"><p class="dropdown__item--text">Взрослые</p><div class="dropdown__count"><a class="dropdown__button" href=""><span class="dropdown__button--del">-</span></a><p class="dropdown__value">0</p><a class="dropdown__button" href=""><span class="dropdown__button--add">+</span></a></div></div><div class="dropdown__item"><p class="dropdown__item--text">Дети</p><div class="dropdown__count"><a class="dropdown__button" href=""><span class="dropdown__button--del">-</span></a><p class="dropdown__value">0</p><a class="dropdown__button" href=""><span class="dropdown__button--add">+</span></a></div></div><div class="dropdown__item"><p class="dropdown__item--text">Младенцы</p><div class="dropdown__count"><a class="dropdown__button" href=""><span class="dropdown__button--del">-</span></a><p class="dropdown__value">0</p><a class="dropdown__button" href=""><span class="dropdown__button--add">+</span></a></div></div><div class="dropdown__button-settings"><a class="dropdown__button-clear" href="#">Очистить</a><a class="dropdown__button-apply" href="#">Применить</a></div></div></div><script src="./assets/js/app.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Form Elements
+    </title>
+  <link href="./assets/css/app.css" rel="stylesheet"></head>
+  <body>
+<input class="text-field" type="text" placeholder="Email">
+<div class="dropdown">
+  <div class="dropdown__header">
+    <div class="dropdown__text"><span class="dropdown__current" id="dropdown__current">Сколько гостей</span></div>
+    <div class="dropdown__img"><img class="dropdown__img--arrow" src="./assets/img/svg/expand_more.svg" alt=""></div>
+  </div>
+  <div class="dropdown__body" id="dropdown__body">
+    <div class="dropdown__item">
+      <p class="dropdown__item--text">Взрослые</p>
+      <div class="dropdown__count">
+        <button class="dropdown__button"><span class="dropdown__button--del">-</span></button>
+        <p class="dropdown__value" id="numAdult"> 0</p>
+        <button class="dropdown__button"><span class="dropdown__button--add">+</span></button>
+      </div>
+    </div>
+    <div class="dropdown__item">
+      <p class="dropdown__item--text">Дети</p>
+      <div class="dropdown__count">
+        <button class="dropdown__button"><span class="dropdown__button--del">-</span></button>
+        <p class="dropdown__value" id="numChild"> 0</p>
+        <button class="dropdown__button"><span class="dropdown__button--add">+</span></button>
+      </div>
+    </div>
+    <div class="dropdown__item">
+      <p class="dropdown__item--text">Младенцы</p>
+      <div class="dropdown__count">
+        <button class="dropdown__button"><span class="dropdown__button--del" id="btnDel">-</span></button>
+        <p class="dropdown__value" id="numBaby">0</p>
+        <button class="dropdown__button"><span class="dropdown__button--add" id="btnAdd">+</span></button>
+      </div>
+    </div>
+    <div class="dropdown__button-settings"><a class="dropdown__button-clear" href="#">Очистить</a><a class="dropdown__button-apply" href="#">Применить</a></div>
+  </div>
+</div>
+<input class="maskedTextField" type="text" name="" placeholder="ДД.ММ.ГГГГ">
+<div class="dateDropdown">
+  <div class="dateDropdown__text"><span class="dateDropdown__text--date">ДД.ММ.ГГГГ</span></div>
+  <div class="dateDropdown__arrow"><img class="dateDropdown__arrow--down" src="./assets/img/svg/expand_more.svg" alt=""></div>
+</div>
+<div class="filterDateDropdown">
+  <div class="filterDateDropdown__text"><span class="filterDateDropdown__text--date">19 авг - 23 авг</span></div>
+  <div class="filterDateDropdown__arrow"><img class="filterDateDropdown__arrow--down" src="./assets/img/svg/expand_more.svg" alt=""></div>
+</div>
+<div class="subscriptionTextField">
+  <div class="subscriptionTextField__text"><span class="subscriptionTextField__text--email">Email</span></div>
+  <div class="subscriptionTextField__arrow"><img class="subscriptionTextField__arrow--forward" src="./assets/img/svg/arrow_forward.svg" alt=""></div>
+</div>
+  <script src="./assets/js/app.js"></script></body>
+  <script src="/src/block/dropdown/dropdown.js"></script>
+</html>

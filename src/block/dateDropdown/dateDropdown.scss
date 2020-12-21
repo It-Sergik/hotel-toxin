@@ -1,0 +1,25 @@
+@import "/src/assets/scss/utils/vars";
+
+.dateDropdown {
+  display: flex;
+  width: 150px;
+  border: 1px solid $lighter-shade;
+  border-radius: 4px;
+  padding: 12px 0 8px;
+  justify-content: space-between;
+
+  &__text {
+    font: {
+      family: $mainFont;
+      size: 14px;
+      weight: $mainFontWeight;
+    }
+    line-height: 18px;
+    color: $dark-shade;
+    text-indent: 15px;
+  }
+
+  &__arrow {
+    margin-right: 15px;
+  }
+}

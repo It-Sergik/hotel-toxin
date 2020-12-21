@@ -5,7 +5,7 @@
   border: 1px solid $lighter-shade;
   border-radius: 4px;
   outline: none;
-  padding: 13px 0 13px 15px;
+  padding: 12px 0 8px;
 
   &::placeholder {
     font: {
@@ -15,6 +15,7 @@
     }
     line-height: 18px;
     color: $lighter-shade;
+    text-indent: 15px;
   }
 
   &:focus {

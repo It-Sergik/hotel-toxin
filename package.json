@@ -7,7 +7,7 @@
     "build": "webpack --config ./build/webpack.build.conf.js",
     "dev": "webpack --config ./build/webpack.dev.conf.js",
     "watch": "webpack --watch --mode development --config ./build/webpack.base.conf.js",
-    "start_server": "webpack serve --config ./build/webpack.devServer.conf.js"
+    "dev:start": "webpack serve --config ./build/webpack.devServer.conf.js"
   },
   "repository": {
     "type": "git",

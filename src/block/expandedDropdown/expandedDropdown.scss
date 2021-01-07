@@ -1,0 +1,95 @@
+@import "/src/assets/scss/utils/vars";
+
+.expandedDropdown {
+  &__header {
+    width: 266px;
+    background: $bg-white;
+    border: 1px solid $light-shade;
+    border-radius: 4px 4px 0 0;
+    border-bottom: none;
+    justify-content: space-between;
+    display: flex;
+  }
+
+  &__text {
+    margin: 12px 0 8px 15px;
+
+    &--current {
+      font: {
+        family: $mainFont;
+        weight: $mainFontWeight;
+        size: 14px;
+      }
+      line-height: 24px;
+      color: $dark-shade;
+    }
+  }
+
+  &__arrow {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+  }
+
+  &__body {
+    width: 266px;
+    background: $bg-white;
+    border: 1px solid $light-shade;
+    border-radius: 0 0 4px 4px;
+  }
+
+  &__item {
+    display: flex;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    margin: 7px 7px 7px 15px;
+
+    &--text {
+      text-decoration: none;
+      text-transform: uppercase;
+      font: {
+        family: $mainFont;
+        weight: $mainFontWeightBold;
+        size: 12px;
+      }
+      line-height: 15px;
+      color: $darker-shade;
+    }
+  }
+
+  &__button {
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $lighter-shade;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    background-color: $bg-white;
+    color: $light-shade;
+    font-family: $mainFont;
+    font-weight: $mainFontWeight;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  &__value {
+    text-decoration: none;
+    text-transform: uppercase;
+    font: {
+      family: $mainFont;
+      weight: $mainFontWeightBold;
+      size: 12px;
+    }
+    line-height: 15px;
+    color: $darker-shade;
+    margin: 0 14px 0 14px;
+  }
+}

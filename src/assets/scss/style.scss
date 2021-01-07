@@ -4,8 +4,11 @@
 @import "/src/block/dateDropdown/dateDropdown";
 @import "/src/block/filterDateDropdown/filterDateDropdown";
 @import "/src/block/subscriptionTextField/subscriptionTextField";
+@import "/src/block/defaultDropdown/defaultDropdown";
+@import "/src/block/expandedDropdown/expandedDropdown";
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }

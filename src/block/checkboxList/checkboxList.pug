@@ -1,5 +1,25 @@
 .checkboxList
-  .checkboxList__text
-    span.checkboxList__text--caption expandble checkbox list
-  .checkboxList__arrow
-    img.checkboxList__arrow--img(src="./assets/img/svg/expand_more.svg", alt="")
+  .checkboxList__header
+    .checkboxList__text
+      span.checkboxList__text--caption expandble checkbox list
+    #checkboxList__arrow.checkboxList__arrow
+      img.checkboxList__arrow--img(src="./assets/img/svg/expand_more.svg", alt="")
+  #checkbox__body.checkboxList__body
+    .checkboxList__check
+      input.checkboxList__custom-checkbox(type="checkbox" id="checkbox1")
+      label.checkboxList__label(for="checkbox1") Завтрак
+    .checkboxList__check
+      input.checkboxList__custom-checkbox(type="checkbox" id="checkbox2" name="chb1")
+      label.checkboxList__label(for="checkbox2") Письменный стол
+    .checkboxList__check
+      input.checkboxList__custom-checkbox(type="checkbox" id="checkbox3" name="chb1")
+      label.checkboxList__label(for="checkbox3") Стул для кормления
+    .checkboxList__check
+      input.checkboxList__custom-checkbox(type="checkbox" id="checkbox4" name="chb1")
+      label.checkboxList__label(for="checkbox4") Кроватка
+    .checkboxList__check
+      input.checkboxList__custom-checkbox(type="checkbox" id="checkbox5" name="chb1")
+      label.checkboxList__label(for="checkbox5") Телевизор
+    .checkboxList__check
+      input.checkboxList__custom-checkbox(type="checkbox" id="checkbox6" name="chb1")
+      label.checkboxList__label(for="checkbox6") Шампунь

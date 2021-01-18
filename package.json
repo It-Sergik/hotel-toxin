@@ -49,6 +49,8 @@
     "webpack-merge": "^5.4.0"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
     "node-sass": "^5.0.0"
   }
 }

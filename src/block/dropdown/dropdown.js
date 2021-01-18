@@ -1,25 +1,47 @@
-let selectGuest = function () {
+(function () {
   let dropdownHeader = document.querySelectorAll(".dropdown__header");
-  let dropBtn = document.querySelectorAll(".dropdown__button");
   let btnApply = document.querySelectorAll(".dropdown__button-apply");
   let btnClear = document.querySelectorAll(".dropdown__button-clear");
   let dropdownBody = document.querySelector("#dropdown__body");
   let fieldCurrent = document.querySelector("#dropdown__current");
-  let btnDel = "dropdown__button--del";
-  let btnAdd = "dropdown__button--add";
-  let valueElement = [];
+  let btnCount = document.querySelectorAll(".dropdown__count");
+  let valueGuest = document.querySelectorAll(".dropdown__value");
+  let len = btnCount.length;
+  let numbers = [];
 
-  for (let i = 0; i < dropBtn.length; i++) {
-    valueElement.push(dropBtn[i]);
-    valueElement[i].addEventListener("click", function (e) {
-      if ((valueElement.indexOf(e.target) == i) && 
-            (dropBtn[i].firstChild.classList == btnDel)){
-        dropBtn[i].nextElementSibling.innerHTML--;
-      } else if ((valueElement.indexOf(e.target) == i) && 
-                (dropBtn[i].firstChild.classList == btnAdd)){
-        dropBtn[i].previousElementSibling.innerHTML++;
-      }
-    })
+  while(len--){
+    btnCount[len].onclick = buttonClick;
+  }
+
+  function buttonClick(e){
+    let el = e ? e.target : window.event.srcElement;
+    if (el.tagName === "BUTTON"){
+      let inp = this.childNodes[3];
+          val = +inp.value || 0;
+      inp.value = val + (el.className === "dropdown__button-minus" ? 
+                        val > 0 ? - 1 : 0 : 1);
+    }
+  }
+
+  function currentNumGuest(){
+    for (let i = 0; i < valueGuest.length; i++) {
+      numbers.push(valueGuest[i].value);
+      valueGuest[i].addEventListener("change", function () {
+        numbers[i] = this.value;
+      });
+    }
+
+    return totalNumGuest(numbers);
+  }
+
+  function totalNumGuest(array) {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+      sum += +array[i];
+    }
+    numbers = [];
+
+    return sum;
   }
 
   dropdownHeader.forEach(item => {
@@ -32,21 +54,23 @@ let selectGuest = function () {
 
   btnClear.forEach(item => {
     item.addEventListener("click", function(){
-      document.querySelector("#numAdult").innerHTML = 0;
-      document.querySelector("#numChild").innerHTML = 0;
-      document.querySelector("#numBaby").innerHTML = 0;
+      for (let i = 0; i < valueGuest.length; i++) {
+        valueGuest[i].value = "0";
+      }
       document.querySelector("#dropdown__current").innerHTML = "Сколько гостей";
     })
   })
 
   function selectBtnApply() {
     dropdownBody.classList.remove("dropdown__active");
+    currentNumGuest();
     fieldCurrent.innerHTML = currentNumGuest() + " " 
                                 + sklonenie(currentNumGuest(), ["гость", "гостя", "гостей"]);
   }
 
   function selectToogle() {
-    dropdownBody.classList.add("dropdown__active");
+    document.querySelector("#dropdown__body").classList.toggle("dropdown__active");
+    document.querySelector("#dropdown__arrow").classList.toggle("dropdown__arrow--clicked");
   }
 
   function sklonenie(number, txt){
@@ -55,14 +79,4 @@ let selectGuest = function () {
       (number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]
     ]
   }
-
-  function currentNumGuest(){
-    let currentNumAdult = parseInt(document.querySelector("#numAdult").innerHTML, 10);
-    let currentNumChild = parseInt(document.querySelector("#numChild").innerHTML, 10);
-    let currentNumBaby = parseInt(document.querySelector("#numBaby").innerHTML, 10);
-    return currentNumAdult + currentNumBaby + currentNumChild;
-  }
-
-}
-
-selectGuest();
+}());

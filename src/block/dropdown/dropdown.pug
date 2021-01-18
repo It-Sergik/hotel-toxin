@@ -1,34 +1,28 @@
 .dropdown
   .dropdown__header
     .dropdown__text
-      span#dropdown__current.dropdown__current Сколько гостей
-    .dropdown__img
+      p#dropdown__current.dropdown__current Сколько гостей
+    #dropdown__arrow.dropdown__arrow
       img(class="dropdown__img--arrow" src="./assets/img/svg/expand_more.svg", alt="")
   #dropdown__body.dropdown__body
     .dropdown__item
       p.dropdown__item--text Взрослые
       .dropdown__count
-        button.dropdown__button
-          span.dropdown__button--del -
-        p#numAdult.dropdown__value  0
-        button.dropdown__button
-          span.dropdown__button--add +
+        button.dropdown__button-minus -
+        input.dropdown__value(type="text" value = "0" readonly)
+        button.dropdown__button-plus +
     .dropdown__item
       p.dropdown__item--text Дети
       .dropdown__count
-        button.dropdown__button
-          span.dropdown__button--del -
-        p#numChild.dropdown__value  0
-        button.dropdown__button
-          span.dropdown__button--add +
+        button.dropdown__button-minus -
+        input.dropdown__value(type="text" value = "0" readonly)
+        button.dropdown__button-plus +
     .dropdown__item
       p.dropdown__item--text Младенцы
       .dropdown__count
-        button.dropdown__button
-          span#btnDel.dropdown__button--del -
-        p#numBaby.dropdown__value 0
-        button.dropdown__button
-          span#btnAdd.dropdown__button--add +
+        button.dropdown__button-minus -   
+        input.dropdown__value(type="text" value = "0" readonly)
+        button.dropdown__button-plus +
     .dropdown__button-settings
       a(class="dropdown__button-clear" href="#") Очистить
       a(class= "dropdown__button-apply" href="#") Применить

@@ -26,12 +26,16 @@
     outline: none;
   }
 
-  &__img {
+  &__arrow {
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
     margin: 15px;
+  }
+
+  &__arrow--clicked {
+    transform: rotate(180deg);
   }
 
   &__current {
@@ -72,7 +76,8 @@
     }
   }
 
-  &__button {
+  &__button-plus,
+  &__button-minus {
     text-decoration: none;
     width: 30px;
     height: 30px;
@@ -80,30 +85,24 @@
     border-radius: 50%;
     text-align: center;
     align-items: center;
-    line-height: 28px;
     justify-content: center;
-    box-sizing: border-box;
     cursor: pointer;
     outline: none;
     background-color: $bg-white;
-
-    &--del,
-    &--add {
-      text-decoration: none;
-      text-transform: none;
-      font: {
-        family: $mainFont;
-        size: 18px;
-        weight: 400;
-      }
-      line-height: 22px;
-      color: $light-shade;
-    }
+    color: $light-shade;
+    font-family: $mainFont;
+    font-weight: $mainFontWeight;
+    font-size: 18px;
+    line-height: 22px;
   }
 
   &__value {
     text-decoration: none;
     text-transform: none;
+    border: none;
+    width: 15px;
+    text-align: center;
+    outline: none;
     font: {
       family: $mainFont;
       size: 12px;

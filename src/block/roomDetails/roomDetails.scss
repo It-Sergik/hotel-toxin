@@ -1,0 +1,52 @@
+@import "/src/assets/scss/utils/vars";
+
+.roomDetails {
+  &__item {
+    display: flex;
+  }
+
+  &__text {
+    margin-left: 10px;
+  }
+
+  &__header-text,
+  &__body-text {
+    font: {
+      family: $mainFont;
+      size: 14px;
+    }
+    line-height: 24px;
+    color: $dark-shade;
+  }
+
+  &__header-text {
+    font-weight: $mainFontWeightBold;
+  }
+
+  &__line {
+    width: 280px;
+    height: 1px;
+    background-color: $darker-shade;
+    color: $darker-shade;
+    margin-top: 17px;
+    margin-bottom: 20px;
+  }
+}
+
+.material-icons {
+  font: {
+    family: "Material Icons";
+    weight: $mainFontWeight;
+    size: 48px;
+  }
+  line-height: 41px;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

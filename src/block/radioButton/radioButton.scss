@@ -1,0 +1,80 @@
+@import "/src/assets/scss/utils/vars";
+
+.radioButton {
+  &__header-text {
+    text-decoration: none;
+    text-transform: uppercase;
+    font: {
+      family: $mainFont;
+      weight: $mainFontWeightBold;
+      size: 12px;
+    }
+    color: $darker-shade;
+    line-height: 15px;
+    margin-bottom: 15px;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    width: 221px;
+  }
+
+  &__item-input {
+    display: none;
+  }
+
+  &__item-label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-right: 10px;
+    font: {
+      family: $mainFont;
+      weight: $mainFontWeight;
+      size: 14px;
+    }
+    color: $dark-shade;
+    line-height: 24px;
+    user-select: none;
+  }
+
+  &__item-input + &__item-label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+
+  &__item-input + &__item-label::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid $lighter-shade;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+  }
+
+  &__item-input + &__item-label::after {
+    content: none;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100);
+    border-radius: 10px;
+    position: absolute;
+    left: 5px;
+  }
+
+  &__item-input:checked + &__item-label::after {
+    content: "";
+  }
+
+  &__item-input:hover + &__item-label::after {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,83 @@
+@import "/src/assets/scss/utils/vars";
+
+.toggle {
+  &__text-header {
+    text-decoration: none;
+    text-transform: uppercase;
+    font: {
+      family: $mainFont;
+      weight: $mainFontWeightBold;
+      size: 12px;
+    }
+    color: $darker-shade;
+    line-height: 15px;
+    margin-bottom: 15px;
+  }
+
+  &__switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+  }
+
+  &__input-form {
+    display: none;
+  }
+
+  &__form {
+    display: inline-flex;
+  }
+
+  &__label-form {
+    display: inline-block;
+    text-decoration: none;
+    font: {
+      family: $mainFont;
+      weight: $mainFontWeight;
+      size: 14px;
+    }
+    color: $dark-shade;
+    line-height: 24px;
+    margin-left: 10px;
+  }
+
+  &__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    border: 1px solid $lighter-shade;
+    border-radius: 10px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  &__slider::before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 3px;
+    bottom: 3px;
+    border-radius: 10px;
+    background: $lighter-shade;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  &__input-form:checked + &__slider {
+    border: 1px solid #bc9cff;
+    border-radius: 10px;
+  }
+
+  &__input-form:checked + &__slider::before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  }
+}
